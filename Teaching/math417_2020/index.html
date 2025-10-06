@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+
+  <script type="text/x-mathjax-config">
+    if (window.MathJax) {
+      MathJax.Hub.Config({
+        tex2jax: {
+        inlineMath: [["$", "$"], ["\\(", "\\)"]],
+        processEscapes: true
+        }
+      });
+    }
+  </script>
+
+  <title>Math 417/502</title>
+  <link href="../../Styles/dartmouth.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+<div id="navigation">
+<table>
+<tr>
+<td><a href="../../index.html">Home</a></td>
+<!-- <td><a href="../../members.html">Members</a></td> -->
+<td><a href="../../research.html">Research</a></td>
+<td><a href="../../students.html">Students</a></td>
+<td><a href="../../teaching.html">Teaching</a></td>
+<td><a href="../../vitae.html">Vit&aelig; </a></td>
+<td><a href="../../publications.html">Publications</a></td>
+<td><a href="../../seminars.html">Seminars</a></td>
+</tr>
+</table>
+
+
+<div class="hr"> <hr /> </div>
+
+
+</div>   <! End of navigation div -->
+
+<div id="name">
+Teaching
+</div>
+ 
+<div class="section">
+<div class="container">
+
+<h1>MATH 417/502: NUMERICAL METHODS</h1>
+<h2>Spring 2020</h2>
+
+<hr>
+
+<p><font color="blue"> <i>General information</i></font></p>
+
+
+<table>
+<tr>
+<th style="text-align: right"> Instructor:</th>
+<td> Diane Guignard</td>
+</tr>
+<tr>
+<th style="text-align: right"> TA:</th>
+<td> Orsan Kilicer, <a href="https://www.math.tamu.edu/~okilicer/Math417_Spring_2020/recitation.html"> <font color="green"> Recitation webpage </font> </a></td>
+</tr>
+<tr>
+<th style="text-align: right"> Classes:</th>
+<td> TR 11:10am-12:25pm in BLOC 163</td>
+</tr>
+<tr>
+<th style="text-align: right"> Labs:</th>
+<td> W 01:50pm-02:40pm in BLOC 133</td>
+</tr>
+<tr>
+<th style="text-align: right">Office hours:</th>
+<td> TR 09:00am-10:00am in BLOC 608P, or by appointment</td>
+</tr>
+<tr>
+<th style="text-align: right">Textbook:</th>
+<td>  Numerical Analysis, 10th edition, by R. Burden, J. Faires and A. Burden (ISBN: 978-1-30-525366-7). </td>
+</tr>
+<tr>
+<th style="text-align: right"> </th>
+<td>  Earlier editions (7th, 8th and 9th) are very similar and can also be used. </td>
+</tr>
+<tr>
+<th style="text-align: right">Syllabus:</th>
+<td> <a href="syllabus_417_update.pdf"> <font color="green">syllabus.pdf</font> </a> (<b>updated March 20</b>, previous version: <a href="syllabus_417.pdf"> <font color="green">syllabus.pdf</font></a>) </td>
+</tr>
+
+</table>
+
+
+<hr>
+
+<p><font color="blue"> <i>Important dates</i></font></p>
+
+<table border="1">
+  <tr>
+    <th>Date</th>
+    <th>Event</th>
+  </tr>
+  <tr>
+    <td>January 14</td>
+    <td>First day of (this) class</td>
+  </tr>
+  <tr>
+    <td>February 27</td>
+    <td>Midterm exam (in class)</td>
+  </tr>
+  <tr>
+    <td>March 9-13</td>
+    <td>Spring break</td>
+  </tr>
+  <tr>
+    <td><font color="red">April 24</font></td>
+    <td>Q-drop deadline (05:00pm)</td>
+  </tr>
+  <tr>
+    <td>April 23</td>
+    <td>Last day of (this) class</td>
+  </tr>
+  <tr>
+    <td>April 30</td>
+    <td>Final exam (03:00pm-05:00pm)</td>
+  </tr>
+</table>
+
+
+<hr>
+
+<p><font color="blue"> <i>Important information</i></font></p>
+<ul>
+
+<li> <b>The midterm</b> (February 27) will cover Chapter 2 (Sections 2.1 to 2.4), Chapter 3 (Sections 3.1 and 3.3 to 3.5) and Chapter 4 (Sections 4.1 to 4.4 and 4.7) (see <td><a href="Exam/info_midterm.pdf"><font color="green">info_midterm</font></a></td> for more details). </li> <br />
+
+<li> <b>The final exam</b> (April 30) is comprehensive and will thus cover, in addition to the material covered by the midterm, Chapter 6 (Sections 6.1 to 6.6), Chapter 7 (Sections 7.1 to 7.3, part of 7.5), Chapter 9 (Sections 9.1 to 9.3) and Chapter 5 (Sections 5.1 to 5.4) (see <td><a href="Exam/info_final.pdf"><font color="green">info_final</font></a></td> for more details and <td><a href="Exam/practice_problems.pdf"><font color="green">practice_problems</font></a></td> for additional exercises). </li> <br />
+
+<li> <b>The final exam</b> will be proctored via Zoom. Please read carefully the following information sheet <td><a href="Exam/info_proctoring_final.pdf"><font color="green">info_proctoring</font></a></td> </li>
+
+</ul>
+
+<hr>
+
+<p><font color="blue"> <i>Homework problems</i></font></p>
+
+Remark: for the additional practice exercises, the numbers correspond to the 10th edition of the textbook (9th edition in the parenthesis).
+
+<ul>
+   <li> <b> <u>Assignment 1</u> </b> <br /> <br />
+
+<b>Hand in:</b> <a href="Homework/HW1.pdf"> <font color="green"> Homework 1</font> </a> (<font color="red">due January 23</font>) <b> Exercise 5 updated 01/18 </b> (<a href="Homework/HW1_sol.pdf"><font color="green">solutions</font></a>)
+<br /> <br />
+
+<b>Additional practice:</b>
+	<ul>
+		<li> Section 2.1: 1,3,20 (1,3,16) </li>
+		<li> Section 2.2: 5,11,20 (3,9,16) </li>
+		<li> Section 2.3: 1,5 (1,5) </li>
+	</ul>
+<br />
+
+<li> <b> <u>Assignment 2</u> </b> <br /> <br />
+
+<b>Strongly suggested:</b> <a href="Homework/HW2.pdf"> <font color="green"> Homework 2</font> </a> (do not hand in, <font color="red"> quiz January 30</font>) 
+<br /> <br />
+
+<b>Additional practice:</b>
+	<ul>
+		<li> Section 2.3: 5,7 (5,7) </li>
+		<li> Section 2.4: 7,11 (7,11) </li>
+		<li> Section 3.1: 13,20 (13,19) </li>
+	</ul>
+<br />
+
+   <li> <b> <u>Assignment 3</u> </b> <br /> <br />
+
+<b>Hand in:</b> <a href="Homework/HW3.pdf"> <font color="green"> Homework 3</font> </a> (<font color="red">due February 6</font>) (<a href="Homework/HW3_sol.pdf"><font color="green">solutions</font></a>)
+<br /> <br />
+
+<b>Additional practice:</b>
+	<ul>
+		<li> Section 3.3: 1a,16,19 (1a,17,10) </li>
+		<li> Section 3.4: 1ac,3ac (1ac,3ac) </li>
+	</ul>
+<br />
+
+<li> <b> <u>Assignment 4</u> </b> <br /> <br />
+
+<b>Strongly suggested:</b> <a href="Homework/HW4.pdf"> <font color="green"> Homework 4</font> </a> (do not hand in, <font color="red"> quiz February 13</font>) 
+<br /> <br />
+
+<b>Additional practice:</b>
+	<ul>
+		<li> Section 3.5: 1,3a,5a (1,3a,5a)  </li>
+		<li> Section 4.1: 5ac,7ac,24 (5ac,7ac,22)  </li>
+	</ul>
+<br />
+
+<li> <b> <u>Assignment 5</u> </b> <br /> <br />
+
+<b>Hand in:</b> <a href="Homework/HW5.pdf"> <font color="green"> Homework 5</font> </a> (<font color="red">due February 20</font>) (<a href="Homework/HW5_sol.pdf"><font color="green">solutions</font></a>)
+<br /> <br />
+
+<b>Additional practice:</b>
+	<ul>
+		<li> Section 4.2: 9,11 (9,11)  </li>
+		<li> Section 4.3: 1ab,3ab,5ab,7ab,23 (1ab,3ab,5ab,7ab,19) </li>
+		<li> Section 4.4: 1,7,13 (1,7,13) </li>
+	</ul>
+<br />
+
+<li> <b> <u>Assignment 6</u> </b> <br /> <br />
+
+<b>Strongly suggested:</b> <a href="Homework/HW6.pdf"> <font color="green"> Homework 6</font> </a> (do not hand in, <font color="red"> midterm February 27</font>) <b> updated 02/25 - Exercise 3</b>
+<br /> <br />
+
+<li> <b> <u>Assignment 7</u> </b> <br /> <br />
+
+<b>Strongly suggested:</b> <a href="Homework/HW7.pdf"> <font color="green"> Homework 7</font> </a> (do not hand in, <font color="red"> quiz March 5</font>) 
+<br /> <br />
+
+<b>Additional practice:</b>
+	<ul>
+		<li> Section 6.1: 5ac, 14, 17 (5ac, 12, 15)  </li>
+		<li> Section 6.2: 10ab,14ab (10ab,14ab) </li>
+	</ul>
+<br />
+
+<li> <b> <u>Assignment 8</u> </b> <br /> <br />
+
+<b>Hand in:</b> <a href="Homework/HW8.pdf"> <font color="green"> Homework 8</font> </a> (<font color="red">due March 26</font>) (<a href="Homework/HW8_sol.pdf"><font color="green">solutions</font></a>)
+<br /> <br />
+
+<b>Additional practice:</b>
+	<ul>
+		<li> Section 6.3: 1,5ab,7a (1,5ab,7a) </li>
+		<li> Section 6.4: 1,7 (1,7) </li>
+		<li> Section 6.5: 1,3,5a (1,3,5a) </li>
+	</ul>
+<br />
+
+<li> <b> <u>Assignment 9</u> </b> <br /> <br />
+
+<b>Strongly suggested:</b> <a href="Homework/HW9.pdf"> <font color="green"> Homework 9</font> </a> (do not hand in, <font color="red"> quiz April 2</font>) 
+<br /> <br />
+
+<b>Additional practice:</b>
+	<ul>
+		<li> Section 6.6: 1,5a,17,19 (1,5a,17,19) </li>
+		<li> Section 7.1: 1abc,3ab,5,13 (1abc,3ab,4,9) </li>
+		<li> Section 7.2: 1d,5d,7d,9d (1d,5d,7d,9d) </li>
+	</ul>
+<br />
+
+<li> <b> <u>Assignment 10</u> </b> <br /> <br />
+
+<b>Hand in:</b> <a href="Homework/HW10.pdf"> <font color="green"> Homework 10</font> </a> (<font color="red">due April 9</font>) (<a href="Homework/HW10_sol.pdf"><font color="green">solutions</font></a>)
+<br /> <br />
+
+<b>Additional practice:</b>
+	<ul>
+		<li> Section 7.3: 9,10 (9,10) </li>
+		<li> Section 7.5: 1ac </li>
+	</ul>
+<br />
+
+<li> <b> <u>Assignment 11</u> </b> <br /> <br />
+
+<b>Strongly suggested:</b> <a href="Homework/HW11.pdf"> <font color="green"> Homework 11</font> </a> (do not hand in, <font color="red"> quiz April 16</font>) 
+<br /> <br />
+
+<b>Additional practice:</b>
+	<ul>
+		<li> Section 9.1: 1a,3bd,15 (1a,3bd,15)  </li>
+		<li> Section 9.2: 5b,11a,16 (5b,9a,12) </li>
+		<li> Section 9.3: 5b,7 (5b,7) </li>
+	</ul>
+<br />
+
+   <li> <b> <u>Assignment 12</u> </b> <br /> <br />
+
+<b>Hand in:</b> <a href="Homework/HW12.pdf"> <font color="green"> Homework 12</font> </a> (<font color="red">due April 23</font>) (<a href="Homework/HW12_sol.pdf"><font color="green">solutions</font></a>)
+
+</ul>
+
+<hr>
+
+<p><font color="blue"> <i>Quizzes and exam (with solution)</i></font></p>
+<td><a href="Quiz/Quiz1_HW2.pdf"> <font color="green"> Quiz1</font></a></td>, <td><a href="Quiz/Quiz2_HW4.pdf"> <font color="green"> Quiz2</font></a></td>, <td><a href="Exam/Midterm.pdf"> <font color="green"> Midterm</font></a></td>, <td><a href="Quiz/Quiz3_HW7.pdf"> <font color="green"> Quiz3</font></a></td>, <td><a href="Quiz/Quiz4_HW9.pdf"> <font color="green"> Quiz4</font></a></td>, <td><a href="Quiz/Quiz5_HW11.pdf"> <font color="green"> Quiz5</font></a></td>
+
+<hr>
+
+<p><font color="blue"> <i>Extra material</i></font></p>
+
+<ul>
+   <li> Example - order of convergence - Newton's method: <td><a href="Extra/Newton_order.pdf"><font color="green"> Newton_order </font> </a></td> <br />
+   <li> Example - Runge's phenomenon: <td><a href="Extra/Runge_phenomenon.pdf"><font color="green"> Runge_phenomenon </font> </a></td> <br />
+   <li> Newton-Cotes formulas: <td><a href="Extra/Newton_Cotes.pdf"><font color="green"> Newton_Cotes </font> </a></td> <br />
+   <li> Composite quadrature formulas: <td><a href="Extra/Composite_quadratures.pdf"><font color="green"> Composite_quadratures </font> </a></td> <br />
+
+</ul>
+
+<hr>
+
+
+<p><font color="blue"> <i>Material covered</i></font></p>
+
+Week  1 (Jan 13-17): Sections 2.1, 2.2 and part of 2.3 <br />
+Week  2 (Jan 20-24): Part of Section 2.3 and Sections 2.4 and 3.1 <br />
+Week  3 (Jan 27-31): Sections 3.3 and 3.4 <br />
+Week  4 (Feb 03-07): Sections 3.5 and 4.1 <br />
+Week  5 (Feb 10-14): Sections 4.2, 4.3 and 4.4 <br />
+Week  6 (Feb 17-21): Sections 4.7 and 6.1 <br />
+Week  7 (Feb 24-28): Sections 6.2, review, midterm <br />
+Week  8 (Mar 02-06): Sections 6.3, 6.4, 6.5 and part of 6.6 <br />
+Week  9 (Mar 09-13): Spring Break <br />
+Week 10 (Mar 16-20): Classes cancelled <br />
+Week 11 (Mar 23-27): Part of Section 6.6, Sections 7.1 and 7.2, part of Section 7.3 <br />
+Week 12 (Mar 30-Apr 3): Part of Section 7.3 (including material from 7.5), Sections 9.1 and 9.2 <br />
+Week 13 (Mar 6-Apr 10): Sections 9.3, 5.1 and 5.2 <br />
+Week 14 (Mar 13-Apr 17): Sections 5.3 (FE,BE,CN,Heun and absolute stability) and part of 5.4 <br />
+Week 15 (Mar 20-Apr 24): Part of Section 5.4 (and adaptive step size) and review <br />
+
+</div>
+</div>
+
+<div id="footer">
+
+<br clear="all" />
+
+
+<table cellpadding="2">
+<tr>
+  <td ><i>Last modified on April 24, 2020.</i></td>
+</tr>
+</table>
+
+</div>
+
+
+</body>
+</html>

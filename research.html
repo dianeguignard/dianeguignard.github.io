@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+
+	<script type="text/x-mathjax-config">
+		if (window.MathJax) {
+			MathJax.Hub.Config({
+				tex2jax: {
+				inlineMath: [["$", "$"], ["\\(", "\\)"]],
+				processEscapes: true
+				}
+			});
+		}
+	</script>
+
+  <title>Research Projects</title>
+  <link href="Styles/dartmouth.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+<div id="navigation">
+<table>
+<tr>
+<td><a href="index.html">Home</a></td>
+<!-- <td><a href="members.html">Members</a></td> -->
+<td><a href="research.html">Research</a></td>
+<td><a href="students.html">Students</a></td>
+<td><a href="teaching.html">Teaching</a></td>
+<td><a href="vitae.html">Vit&aelig; </a></td>
+<td><a href="publications.html">Publications</a></td>
+<td><a href="seminars.html">Seminars</a></td>
+</tr>
+</table>
+
+
+<div class="hr"> <hr /> </div>
+
+</div>   <! End of navigation div -->
+
+<div id="name">
+Research Projects
+</div>
+
+
+<div class="section">
+<div class="container">
+
+<h2>Prestrained plates</h2>
+
+<p style="font-size:100%;">
+Prestrained thin materials develop internal stresses, deform out of plane, and exhibit nontrivial 3D shapes even without external forces. Chief examples exhibiting such phenomena are nematic glasses, natural growth of soft tissues or manufactured polymer gels. After reduction from 3D to 2D, denoting by $\Omega\subset\mathbb{R}^2$ the midplane of the plate, the model consists in minimizing the bending energy
+$$
+E(\mathbf{y}) = \frac{\mu}{12}\int_{\Omega}\big|g^{-\frac{1}{2}} \, {\rm II}(\mathbf{y}) \, g^{-\frac{1}{2}}\big|^2+\frac{\lambda}{2\mu+\lambda}{\rm tr}\big(g^{-\frac{1}{2}}\, {\rm II}(\mathbf{y}) \, g^{-\frac{1}{2}} \big)^2
+$$
+under the constraint that
+$$\nabla\mathbf{y}^T\nabla\mathbf{y}=g \quad \mbox{a.e. in } \Omega.$$
+Here, ${\rm II}(\mathbf{y})$ denote the second fundamental form of the deformed plate $\mathbf{y}(\Omega)$, $\mu$ and $\lambda$ are the Lam&eacute; coefficients, and $g$ is the given (symmetric positive definite) target metric. The second fundamental form can actually be replaced by the Hessian of the deformation without affecting the minimizers. In the proposed numerical method, an LDG approach is used for the discretization, where the Hessian is replaced by a so-called discrete Hessian consisting of the broken Hessian and the liftings of jump terms, and an $H^2$ gradient flow is used for the energy minimization.
+</p>
+
+<hr>
+
+<h3>Manufactured gel discs</h3>
+
+<p>
+A laboratory experiment, where prestrained discs made of NIPA gel with various monomer concentrations are manufactured, is presented in [3]. Considering a similar metric, see [3, Section 5.5] for details, the proposed numerical method produces deformations that are comparable to the experimental ones.
+</p>
+
+<div class="row">
+  <div class="col-lg-3 text-center">
+    <img src="Figures/prestrained_circular_A1.png" alt="Gel disc elliptic" class="img-fluid" style="width:70%" />
+  </div>
+  <div class="col-lg-3 text-center">
+    <img src="Figures/gel_disc_p_final.png" alt="Gel disc hyperbolic" class="img-fluid" style="width:50%" />
+  </div>
+  <div class="col-lg-3 text-center">
+    <img src="Figures/prestrained_circular_B2.png" alt="Simulation elliptic" class="img-fluid" style="width:70%" />
+  </div>
+  <div class="col-lg-3 text-center">
+    <img src="Figures/gel_disc_n_final.png" alt="Simulation hyperbolic" class="img-fluid" style="width:80%" />
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-6">
+    <p>
+        Laboratory manufactured disc gels using an <i>elliptic</i> prestrained metric $g$ along with the approximate equilibrium shape.
+    </p>
+  </div>
+  <div class="col-lg-6">
+    <p>
+        Laboratory manufactured disc gels using a <i>hyperbolic</i> prestrained metric $g$ along with the approximate equilibrium shape.
+    </p>
+
+  </div>
+</div>
+
+
+<hr>
+
+<h3>Metric with positive Gaussian curvature</h3>
+
+<p>
+In this example, we consider the bending of the unit disc when a metric with positive Gaussian curvature is prescribed, namely
+$$
+g = \nabla\mathbf{y}^T\nabla\mathbf{y} \qquad \mbox{with} \qquad \mathbf{y}(x_1,x_2)=\left(x_1,x_2,\sqrt{0.2}\sin\Big(\frac{\pi}{2}\big(1-\sqrt{x_1^2+x_2^2}\big)\Big)\right)^T,
+$$
+where $\mathbf{y}$ corresponds to the parametrization of a <i>bubble</i>. We do not impose any boundary conditions (<i>free boundary case</i>). Before running the gradient flow algorithm, a pre-processing step is used to get an initial deformation with a prestrain defect below 0.1.
+</p>
+
+<div class="row">
+  <div class="col-lg-12 text-center">
+    <video controls width="50%">
+    <source src="Movies/disc_elliptic.mp4" type="video/mp4">
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-12 text-center">
+    <p>
+    Evolution of the deformation throughout the gradient flow for the unit disc with a positive Gaussian curvature metric.
+    </p>
+  </div>
+</div>
+
+
+<hr>
+
+<h3>Metric with negative Gaussian curvature</h3>
+
+<p>
+We use the same setting as in the previous example but with the metric
+$$
+g(x_1,x_2) =
+\begin{bmatrix}
+1+x_2^2 & x_1x_2 \\
+x_1x_2 & 1+x_1^2
+\end{bmatrix}
+$$
+which has a negative Gaussian curvature and is achieved by the deformation $\mathbf{y}(x_1,x_2)=(x_1,x_2,x_1x_2)^T$ corresponding to a hyperbolic paraboloid.
+</p>
+
+<div class="row">
+  <div class="col-lg-12 text-center">
+    <video controls width="50%">
+    <source src="Movies/disc_hyperbolic.mp4" type="video/mp4">
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-12 text-center">
+    <p>
+    Evolution of the deformation throughout the gradient flow for the unit disc with a negative Gaussian curvature metric.
+    </p>
+  </div>
+</div>
+
+
+<hr>
+
+<h3>Metric corresponding to a catenoid/helicoid</h3>
+
+<p style="font-size:100%;">
+Here, $\Omega\subset\mathbb{R}^2$ is a rectangular domain and we prescribe the metric
+$$
+g(x_1,x_2) =
+\begin{bmatrix}
+\cosh(x_2)^2 & 0 \\ 0 & \cosh(x_2)^2 
+\end{bmatrix}.
+$$
+The deformations
+$$
+\mathbf{y}^{\alpha}(x_1,x_2)=\cos(\alpha)
+\begin{bmatrix}
+\sinh(x_2)\sin(x_1) \\ -\sinh(x_2)\cos(x_1) \\ x_1 
+\end{bmatrix}
++ \sin(\alpha)
+\begin{bmatrix}
+\cosh(x_2)\cos(x_1) \\ \cosh(x_2)\sin(x_1) \\ x_2 
+\end{bmatrix}
+$$
+are all compatible with the metric and all give the same energy. The case $\alpha=0$ corresponds to an <i>helicoid</i> while $\alpha=\pi/2$ represents a <i>catenoid</i>.
+<p>
+
+<div class="row">
+	<div class="col-lg-4 text-right">
+		<img src="Figures/catenoid_ref3_1_side.png" alt="Catenoid - 1" class="img-fluid" style="width:60%" />
+  	</div>
+  	<div class="col-lg-4 text-center">
+		<img src="Figures/catenoid_ref3_2_side.png" alt="Catenoid - 2" class="img-fluid" style="width:60%" />
+  	</div>
+  	<div class="col-lg-4 text-left">
+		<img src="Figures/catenoid_ref3_3_side.png" alt="Catenoid - 3" class="img-fluid" style="width:60%" />
+	</div>
+</div>
+
+<div class="row">
+  <div class="col-lg-1"> </div>
+  <div class="col-lg-10">
+    <p>
+    Final configurations for the <i>free boundary case</i> with different initial deformations: from left to right, the prestrain defect of the initial deformation is about 2.6, 1.4 and 0.9. The smaller the defect, the closer the final shape is to be a closed catenoid.
+    </p>
+  </div>
+  <div class="col-lg-1"> </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-1"> </div>
+  <div class="col-lg-4 text-center">
+    <video controls width="100%">
+    <source src="Movies/catenoid.mp4" type="video/mp4">
+  </div>
+  <div class="col-lg-6 text-center">
+    <video controls width="88%">
+    <source src="Movies/helicoid_2views.mp4" type="video/mp4">
+  </div>
+  <div class="col-lg-1"> </div>
+</div>
+
+
+<div class="row">
+  <div class="col-lg-1"> </div>
+  <div class="col-lg-10">
+    <p>
+    Evolution of the deformation throughout the gradient flow. Left: <i>free boundary case</i>; right: view from the side and from the top when boundary conditions for $\nabla\mathbf{y}$ and $\mathbf{y}$ are prescribed on the bottom side of the rectangle.  
+    </p>
+  </div>
+  <div class="col-lg-1"> </div>
+<div>
+
+<hr>
+
+<table>
+<tr><td>[1]</td> <td>A. Bonito, D. Guignard, R.H. Nochetto, and S. Yang. <i><b>LDG approximation of large deformations of prestrained plates</b></i>. Submitted (<a href="https://arxiv.org/abs/2011.01086" target="_blank" style="color:green">ArXiv preprint</a>). </td> </tr>
+<tr><td>[2]</td> <td>A. Bonito, D. Guignard, R.H. Nochetto, and S. Yang. <i><b>Numerical analysis of the LDG method for deformation of prestrained plates</b></i>. Submitted </td> </tr>
+<tr><td> </td> <td> (<a href="https://arxiv.org/abs/2106.13877" target="_blank" style="color:green">ArXiv preprint</a>). </td> </tr>
+<tr><td>[3]</td> <td>E. Sharon and E. Efrati. <i><b>The mechanics of non-euclidean plates</b></i>. Soft Matter 6(2):5693-5704, 2010. </td> </tr>
+</table>
+
+<hr>
+
+<h2>Other projects</h2>
+
+<p > under construction... </p>
+
+</div>
+</div> <!-- END section -->
+
+
+
+
+<div id="footer">
+
+<br clear="all" />
+
+
+<table cellpadding="2">
+<tr>
+  <td ><i>Last modified on June 28, 2021.</i></td>
+</tr>
+</table>
+
+</div>
+
+
+</body>
+</html> 
+
